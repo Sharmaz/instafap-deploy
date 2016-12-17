@@ -1,0 +1,354 @@
+$secondary-color: #125688;
+
+@import "node_modules/materialize-css/sass/materialize.scss";
+
+body {
+  background: #fafafa;
+  color: #125688;
+  font-family: Montserrat;
+}
+
+#main-container {
+  margin: 0 auto;
+}
+
+.landing {
+  margin: 30px auto;
+}
+
+.iphone {
+  max-width: 100%;
+}
+
+.site-footer {
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.login-box,
+.signup-box {
+  background-color: white;
+  border: 1px solid #edeeee;
+  border-radius: 3px;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.instafap {
+  font-family: 'Oleo Script';
+  font-size: 42px;
+  color: $secondary-color !important;
+}
+
+.signup-box .instafap {
+  font-family: 'Oleo Script';
+  font-size: 42px;
+}
+
+.signup-form {
+  width: 65%;
+  margin: 0 auto;
+}
+
+.signup-form h2 {
+  color: #a5a7aa;
+  font-size: 1.2em;
+}
+
+.signup-form .btn.btn-fb {
+  background-color: #4090db;
+  font-size: .8em;
+}
+
+.signup-form .btn.btn-fb:hover {
+  background-color: #2d6599;
+}
+
+.signup-form .btn.btn-signup {
+  background-color: #125688;
+}
+.header {
+  background-color: white;
+  color: $secondary-color;
+  box-shadow: none;
+  border-bottom: 1px solid #edeeee;
+}
+
+.timeline {
+  padding: 30px 0;
+}
+
+$avatar-size: 48px;
+
+.avatar {
+  width: $avatar-size;
+  height: $avatar-size;
+  border-radius: 50%;
+  float: left;
+  margin-right: 12px;
+}
+
+.card small.time {
+  line-height: $avatar-size;
+}
+
+.card p {
+  padding: 20px 0;
+}
+
+.card .likes {
+  line-height: 30px;
+  margin-left: 12px;
+}
+.userpics {
+  margin-top: 16px;
+  width: 95%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+.userpics:hover {
+  -webkit-filter: blur(5px) ;
+  -moz-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+
+.userpics:hover ~ .user-likes {
+  visibility: visible;
+}
+
+.user-likes {
+  z-index: 1;
+  visibility: hidden;
+  position: absolute;
+  margin-left: 34%;
+  margin-top: -48%;
+  color: white;
+  font-size: 32px;
+}
+
+@media screen and (min-width: 600px) {
+  .user-likes {
+    margin-left: 16%;
+    margin-top: -23%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .user-likes {
+    margin-left: 8%;
+    margin-top: -12%;
+  }
+}
+
+ .user-likes span {
+  vertical-align: top;
+  font-size: 22px;
+}
+
+.modal-image {
+  margin: 0;
+  padding: 0;
+  width: 100% !important;
+}
+
+.modal-likes {
+  font-size: 22px !important;
+  margin-left: 2px;
+}
+
+.modal-title {
+  font-size: 32px !important;
+  font-weight: bold !important;
+}
+
+.modal { 
+  width: 75% !important ; 
+  max-height: 90% !important ; 
+  overflow-y: hidden !important ;
+  overflow-x: hidden !important ;
+}
+@media screen and (min-width: 600px) {
+  .modal { 
+    width: 90% !important ; 
+    max-height: 80% !important ; 
+  }
+
+}
+
+.modalCamara { 
+  width: 100% !important ; 
+  max-height: 100% !important ;
+}
+
+.modal-content {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+@media screen and (min-width: 470px) {
+  .modal-content{
+    margin: 10px !important;
+    padding: 10px !important;
+  }
+}
+.camara-picture {
+  padding: 0;
+  margin: 0 auto !important;
+}
+
+.footers-buttons {
+  margin: 10px;
+}
+@media screen and (min-width: 992px) {
+  .modal { 
+    width: 70% !important ; 
+    max-height: 85% !important ; 
+  }
+
+}
+
+.profile-avatar {
+  margin-top: 10px;
+  width: 50%;
+  border: .5px solid $secondary-color;
+}
+.profile-username {
+  font-size: 2rem;
+}
+
+.card i {
+  font-size: 30px;
+}
+
+.card .username {
+  color: $secondary-color;
+}
+
+.card .fa-heart-o {
+  color: $secondary-color;
+}
+
+.card .fa-heart {
+  color: #f44336;
+  display: none;
+}
+
+.card.liked {
+ .fa-heart {
+    display: block;
+  }
+  .fa-heart-o {
+    display: none;
+  }
+}
+
+.like-heart {
+  color: white;
+  font-size: 10em;
+  position: absolute;
+  top: 30%;
+  left: 35%;
+  transform: translate(-50, -50);
+  transition: all .1s ease;
+  opacity: 0;
+
+  &.liked {
+    display: block;
+    font-size: 10em;
+    transition: all .5s ease;
+    opacity: 1;
+
+  }
+}
+
+.loader {
+  font-size: 10px;
+  margin: 50px auto;
+  text-indent: -9999em;
+  width: 11em;
+  height: 11em;
+  border-radius: 50%;
+  background: #fafafa;
+  background: -moz-linear-gradient(left, #00BCD4 10%, rgba(255, 255, 255, 0) 42%);
+  background: -webkit-linear-gradient(left, #00BCD4 10%, rgba(255, 255, 255, 0) 42%);
+  background: -o-linear-gradient(left, #00BCD4 10%, rgba(255, 255, 255, 0) 42%);
+  background: -ms-linear-gradient(left, #00BCD4 10%, rgba(255, 255, 255, 0) 42%);
+  background: linear-gradient(to right, #00BCD4 10%, rgba(255, 255, 255, 0) 42%);
+  position: relative;
+  -webkit-animation: load3 1.4s infinite linear;
+  animation: load3 1.4s infinite linear;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.loader:before {
+  width: 50%;
+  height: 50%;
+  background: #fafafa;
+  border-radius: 100% 0 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+}
+.loader:after {
+  background: #fafafa;
+  width: 75%;
+  height: 75%;
+  border-radius: 50%;
+  content: '';
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+@-webkit-keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+
+.form-upload {
+  span, button {
+    color: white;
+  }
+
+  .fileUpload {
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+
+    input{
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      margin: 0;
+      padding: 0;
+      font-size: 20px;
+      cursor: pointer;
+      opacity: 0;
+      filter:  alpha(opacity=0);
+    }
+  }
+
+}
+

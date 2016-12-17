@@ -1,0 +1,31 @@
+{
+  "name": "instafap-ws",
+  "version": "1.0.0",
+  "description": "Instafap Realtime Backend",
+  "main": "index.js",
+  "scripts": {
+    "lint": "standard",
+    "start": "node index"
+  },
+  "standard": {
+    "parser": "babel-eslint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sharmaz/instafap-ws.git"
+  },
+  "author": "Ivan Robles <irae45@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Sharmaz/instafap-ws/issues"
+  },
+  "homepage": "https://github.com/Sharmaz/instafap-ws#readme",
+  "devDependencies": {
+    "babel-eslint": "^7.1.1",
+    "standard": "^8.6.0"
+  },
+  "dependencies": {
+    "rethinkdb": "^2.3.3",
+    "socket.io": "^1.7.1"
+  }
+}

@@ -5,3 +5,10 @@
       apt: update_cache=yes
   roles:
     - name: instafap
+  vars:
+    - projects:
+      - instafap-db
+      - instafap-api
+      - instafap-client
+      - instafap-ws
+      - instafap
