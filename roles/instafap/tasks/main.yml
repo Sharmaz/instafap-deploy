@@ -33,3 +33,16 @@
     state=restarted
     enabled=yes
   with_items: "{{ services }}"
+- name: "Copying NGINX config files"
+  copy:
+    src="nginx/{{ item }}"
+    dest="/etc/nginx/sites-enabled/{{ item }}"
+    mode=u=r,g=r,o=r
+  with_items:
+    - instafap.conf
+    - instafap-api.conf
+    - instafap-ws.conf
+- name: "Restarting NGINX"
+  service:
+    name=nginx
+    state=reloaded
