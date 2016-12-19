@@ -12,3 +12,9 @@
       - instafap-client
       - instafap-ws
       - instafap
+    - services:
+      - instafap-api-pictures
+      - instafap-api-users
+      - instafap-api-auth
+      - instafap-ws
+      - instafap
